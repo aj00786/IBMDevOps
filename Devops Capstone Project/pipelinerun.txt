@@ -1,0 +1,21 @@
+[init : remove] Removing all files from /workspace/source ...
+
+[clone : clone] + '[' false '=' true ]
+[clone : clone] + '[' false '=' true ]
+[clone : clone] + '[' false '=' true ]
+[clone : clone] + CHECKOUT_DIR=/workspace/output/
+[clone : clone] + '[' true '=' true ]
+[clone : clone] + cleandir
+[clone : clone] + '[' -d /workspace/output/ ]
+[clone : clone] + rm -rf '/workspace/output//*'
+[clone : clone] + rm -rf '/workspace/output//.[!.]*'
+[clone : clone] + rm -rf '/workspace/output//..?*'
+[clone : clone] + test -z 
+[clone : clone] + test -z 
+[clone : clone] + test -z 
+[clone : clone] + git config --global --add safe.directory /workspace/output
+[clone : clone] + /ko-app/git-init '-url=https://github.com/aj00786/devops-capstone-project.git' '-revision=main' '-refspec=' '-path=/workspace/output/' '-sslVerify=true' '-submodules=true' '-depth=1' '-sparseCheckoutDirectories='
+[clone : clone] {"level":"info","ts":1668253268.8971353,"caller":"git/git.go:176","msg":"Successfully cloned https://github.com/aj00786/devops-capstone-project.git @ a024966820637e46e66fdede2bb8b06504c75164 (grafted, HEAD, origin/main) in path /workspace/output/"}
+[clone : clone] {"level":"error","ts":1668253269.080259,"caller":"git/git.go:53","msg":"Error running git [submodule update --recursive --init --depth=1]: exit status 128\nfatal: No url found for submodule path 'devops-capstone-project' in .gitmodules\n","stacktrace":"github.com/tektoncd/pipeline/pkg/git.run\n\tgithub.com/tektoncd/pipeline/pkg/git/git.go:53\ngithub.com/tektoncd/pipeline/pkg/git.submoduleFetch\n\tgithub.com/tektoncd/pipeline/pkg/git/git.go:212\ngithub.com/tektoncd/pipeline/pkg/git.Fetch\n\tgithub.com/tektoncd/pipeline/pkg/git/git.go:178\nmain.main\n\tgithub.com/tektoncd/pipeline/cmd/git-init/main.go:53\nruntime.main\n\truntime/proc.go:250"}
+[clone : clone] {"level":"fatal","ts":1668253269.0803761,"caller":"git-init/main.go:54","msg":"Error fetching git repository: exit status 128","stacktrace":"main.main\n\tgithub.com/tektoncd/pipeline/cmd/git-init/main.go:54\nruntime.main\n\truntime/proc.go:250"}
+
